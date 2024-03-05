@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+/* App.css */
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    /* Gradient background */
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.chat-container {
+    width: 400px;
+    border: 1px solid #ced4da;
+    /* Border color for the chat container */
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+    /* Background color for the chat container */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    /* Box shadow for the chat container */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.message-container {
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 300px;
 }
 
-.App-link {
-  color: #61dafb;
+.message {
+    display: flex;
+    margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #adb5bd;
+    /* Background color for user avatars */
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.message-content {
+    flex: 1;
+}
+
+.username {
+    font-weight: bold;
+    color: #007bff;
+    /* Color for usernames */
+}
+
+.text {
+    margin-top: 5px;
+    background-color: #f1f1f1;
+    /* Background color for message text */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.timestamp {
+    font-size: 12px;
+    color: #6c757d;
+    /* Color for message timestamps */
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    /* Background color for the input container */
+}
+
+.input-field {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    /* Border color for the input field */
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.send-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    /* Background color for the send button */
+    color: #fff;
+    /* Text color for the send button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: #0056b3;
+    /* Background color for the send button on hover */
 }
